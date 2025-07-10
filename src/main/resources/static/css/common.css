@@ -1,0 +1,344 @@
+/* Stili comuni per l'applicazione Concessionario */
+
+:root {
+    --primary-color: #3498db;
+    --primary-dark: #2980b9;
+    --secondary-color: #2ecc71;
+    --secondary-dark: #27ae60;
+    --danger-color: #e74c3c;
+    --danger-dark: #c0392b;
+    --warning-color: #f39c12;
+    --warning-dark: #d35400;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --gray-color: #6c757d;
+    --border-color: #dee2e6;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --font-main: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Stili generali */
+body {
+    background-color: #f0f2f5;
+    padding-top: 20px;
+    font-family: var(--font-main);
+    color: var(--dark-color);
+}
+
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    position: relative;
+    border-top: 4px solid var(--primary-color);
+}
+
+.page-title {
+    margin-bottom: 30px;
+    color: var(--dark-color);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+/* Stile per l'area utente e logout */
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 8px 0;
+}
+
+.user-info .user-email {
+    margin-right: 15px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.logout-btn {
+    background-color: var(--danger-color);
+    color: white;
+    border: 1px solid var(--danger-color);
+    border-radius: 4px;
+    padding: 5px 12px;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: var(--danger-dark);
+    border-color: var(--danger-dark);
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Stili per i pulsanti */
+.btn {
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-success {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-success:hover {
+    background-color: var(--secondary-dark);
+    border-color: var(--secondary-dark);
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+}
+
+.btn-danger:hover {
+    background-color: var(--danger-dark);
+    border-color: var(--danger-dark);
+}
+
+.btn-warning {
+    background-color: var(--warning-color);
+    border-color: var(--warning-color);
+    color: white;
+}
+
+.btn-warning:hover {
+    background-color: var(--warning-dark);
+    border-color: var(--warning-dark);
+    color: white;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-back {
+    margin-bottom: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-back i {
+    transition: transform 0.3s ease;
+}
+
+.btn-back:hover i {
+    transform: translateX(-3px);
+}
+
+/* Stili per le tabelle */
+.table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    margin-bottom: 30px;
+}
+
+.table thead th {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    font-weight: 500;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: rgba(52, 152, 219, 0.05);
+}
+
+.table tbody tr:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.table td {
+    padding: 12px 15px;
+    vertical-align: middle;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Stili per i form */
+.form-control, .form-select {
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--dark-color);
+    margin-bottom: 8px;
+}
+
+.invalid-feedback {
+    display: block;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+    color: var(--danger-color);
+}
+
+/* Stili per i modal */
+.modal-content {
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.modal-header {
+    background-color: var(--primary-color);
+    color: white;
+    border-bottom: none;
+    padding: 15px 20px;
+}
+
+.modal-header .modal-title {
+    font-weight: 600;
+}
+
+.modal-header .btn-close {
+    color: white;
+    opacity: 0.8;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-footer {
+    border-top: 1px solid var(--border-color);
+    padding: 15px 20px;
+}
+
+/* Stili per le card */
+.card {
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px var(--shadow-color);
+}
+
+.card-header {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 8px 8px 0 0 !important;
+    padding: 12px 15px;
+    font-weight: 500;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-footer {
+    background-color: rgba(52, 152, 219, 0.05);
+    border-top: 1px solid var(--border-color);
+    padding: 12px 15px;
+}
+
+/* Stili per le action buttons */
+.action-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+/* Stili per messaggi di errore */
+.error-message {
+    color: var(--danger-color);
+    font-size: 0.875rem;
+    margin-top: 5px;
+}
+
+/* Animazioni */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-container {
+        padding: 20px;
+    }
+    
+    .table thead {
+        display: none;
+    }
+    
+    .table, .table tbody, .table tr, .table td {
+        display: block;
+        width: 100%;
+    }
+    
+    .table tr {
+        margin-bottom: 15px;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    
+    .table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: 500;
+    }
+}
